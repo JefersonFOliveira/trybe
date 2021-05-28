@@ -101,7 +101,26 @@
         elementH3.innerHTML = 'Text ' + index;
         elementMainDiv.appendChild(elementH3);
       }
-
+// //exerc2.1
+      let title = document.getElementsByTagName('h1')[0];
+      title.className = 'title';
+// //exerc2.2
+      let descriptionH3 = document.getElementsByTagName('h3');
+      for (let index = 0; index < 3; index += 1) {
+        descriptionH3[index].className = 'description';
+      }
+// //exerc2.3
+      let divLeftContent = document.getElementsByClassName('left-content')[0];
+      elementMainDiv.removeChild(divLeftContent);
+//exerc2.4
+      let divRightContent = document.getElementsByClassName('right-content')[0];
+      divRightContent.style.marginRight = 'auto';
+//exerc2.5
+      let divCenterContent = document.getElementsByClassName('center-content')[0];
+      divCenterContent.parentNode.style.backgroundColor = 'green';
+//exerc2.6
+      listUl.lastChild.remove();
+      listUl.lastChild.remove();
 // COLOQUE SEU CÓDIGO AQUI
     </script>
   </body>
