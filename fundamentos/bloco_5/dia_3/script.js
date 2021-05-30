@@ -59,16 +59,56 @@ function creatHolidaysButtons(buttonName) {
 creatHolidaysButtons('Feriados');
 
 //Exercicio 3
-function handleHolidayClick(event) {
-  let holidayClass = document.querySelectorAll('.holiday');
-  for (let index = 0; index < holidayClass.length; index += 1) {
-    holidayClass[index].style.backgroundColor = 'rgb(44,55,49)';
-  }
-}
 function holidayChange() {
   let buttonHoliday = document.querySelector('#btn-holiday');
-  buttonHoliday.addEventListener('click', handleHolidayClick) 
-}
+  let backgroundColor = 'rgb(238,238,238)';
+  let newColor = 'red';
+  
+  buttonHoliday.addEventListener('click', function() {
+  let holidayClass = document.querySelectorAll('.holiday')
+    for (let index = 0; index < holidayClass.length; index += 1) {
+    if (holidayClass[index].style.backgroundColor === newColor) {
+      holidayClass[index].style.backgroundColor = backgroundColor;
+    } else {
+      holidayClass[index].style.backgroundColor = newColor;
+    }
+  }
+})
+};
+
+
 holidayChange();
 
 //Exercicio 4
+function creatFridayButton(friday) {
+  let buttonContainer = document.querySelector('.buttons-container');
+  let button = document.createElement('button');
+  let buttonNewId = 'btn-friday';
+
+  button.innerHTML = friday;
+  button.id = buttonNewId;
+  buttonContainer.appendChild(button);  
+}
+
+creatHolidaysButtons('Sexta-Feira');
+
+//Exercicio 5
+function displayFridays(fridaysArray) {
+  let getFridayButton = document.querySelector('#btn-friday');
+  let fridays = document.getElementsByClassName('friday-day');
+  let newFridayText = 'Aleluia';
+
+  getFridayButton.addEventListener('click', function() {
+  for (let index = 0; index < fridays.length; index += 1) {
+    if (fridays[index].innerHTML !== newFridayText) {
+        fridays[index].innerHTML = newFridayText;
+    } else {
+        fridays[index].innerHTML = fridaysArray[index];
+      }
+    }
+  })
+};
+
+let dezFridays = [ 4, 11, 18, 25 ];
+displayFridays(dezFridays);
+
