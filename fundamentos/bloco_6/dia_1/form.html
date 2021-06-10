@@ -8,7 +8,7 @@
 <body>
   <form action="" method="get">
   <fieldset>
-    <div class="line-content">
+    <div id="line-content">
       <label for="name">Nome: </label>
       <input type="text" id="name" maxlength="40" required>
     </div>
@@ -29,9 +29,9 @@
       <input type="text" name="city" id="city" maxlength="28" required>
     </div>  
     <div class="line-content">
-      <label for="state">Estado: </label>
-      <select name="state" id="state">
-        <option value=""></option>
+      <label for="states">Estado: </label>
+      <select name="states" id="states" required>
+        <option value="">selecione o estado</option>
       </select>
     </div>
     <div class="line-content">
@@ -45,7 +45,21 @@
       <label for="resume">Resumo do curriculo: </label>
       <textarea name="resume" id="resume" maxlength="1000" cols="100" rows="20"></textarea>
     </div>
+    <div class="line-content">
+      <label for="cargo">Cargo: </label>
+      <input type="text" name="cargo" id="cargo" maxlength="40" required>
+    </div>
+    <div class="line-content">
+      <label for="descript-cargo">Descricao do Cargo:</label>
+      <input type="text" name="descript-cargo" id="descript-cargo" maxlength="500" required>
+    </div>
+    <div class="line-content">
+      <label for="data">Data de Inicio</label>
+      <input type="text " name="data" id="data" required>
+    </div>
   </fieldset>
+  <button id="submit-button" type="submit">Enviar</button>
+  <button id="clear-button">Limpar</button>
 
   </form>
 
